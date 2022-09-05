@@ -1,0 +1,39 @@
+.contador {
+    width: fit-content;
+    background-color: rgb(156, 156, 156);
+    margin: auto;
+    padding: 1rem;
+    text-align: center;  
+    
+}
+
+.contadorHijo {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+    align-items: center;
+}
+
+.button {
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: rgb(0, 0, 0);
+    background-color: white; 
+    font-size: auto; 
+    
+}
+
+h2 {
+    color: white;
+}
+
+.buttonAgregar {
+    border: none;    
+    color: rgb(0, 0, 0);
+    background-color: white; 
+    padding: 8px;
+   
+}
