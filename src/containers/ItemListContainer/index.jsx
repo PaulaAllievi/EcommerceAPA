@@ -13,14 +13,15 @@ export const ItemListContainer = () => {
   useEffect( ()=> {
     ( async ()=> {
 
-      const obtenerProductos = new Promise ((accept, reject)=> {
+     /* const obtenerProductos = new Promise ((accept, reject)=> {
         setTimeout(()=> {
           accept(products)
         }, 2000);
-      })
+      }) */
   
       try {
-        const productos = await obtenerProductos;        
+        const response = await fetch("https://fakestoreapi.com/products"); 
+        const productos = await response.json();
         setProductos(productos);
   
       }catch (error) {  

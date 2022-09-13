@@ -8,11 +8,10 @@ const Item = ({product}) => {
     <div className='card'>
         <div className='info'>
         <section>
-            <img className='img' src={product.img} alt='foto'/>
+            <img className='img' src={product.image}  width={250} alt='foto'/>
         </section>
-            <h2> {product.name} </h2>
-            <h3> ${product.price} </h3>
-            <p> {product.description} </p>
+            <h2> {product.title} </h2>
+            
         </div>   
     </div> 
   )
