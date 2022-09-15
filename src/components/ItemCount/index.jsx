@@ -38,5 +38,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
       );    
 }
+/*<ItemCount initial={1} stock={5} onAdd={agregarAlCarrito} />*/
 
 export default ItemCount;
