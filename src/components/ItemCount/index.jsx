@@ -18,6 +18,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
             setCount(count-1);                
     }
 
+    const addCart = () => {
+        onAdd(count);
+        setCount(initial);
+    }
+
     useEffect(() => {
         setCount(parseInt(initial));
     }, [initial])
@@ -31,13 +36,13 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <button className="button" onClick={handleAdd}>+</button>
         </div>
         <div>
-            <button className="buttonAgregar" disabled={stock <=0} onClick={() => onAdd(count)}>Agregar al carrito</button>
+            <button className="buttonAgregar" disabled={stock <=0} onClick={addCart}>Agregar al carrito</button>
         </div>
         </div>
         </> 
 
       );    
 }
-/*<ItemCount initial={1} stock={5} onAdd={agregarAlCarrito} />*/
+
 
 export default ItemCount;
