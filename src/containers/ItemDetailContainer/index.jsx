@@ -3,6 +3,7 @@ import { useState } from 'react'
 import ItemDetail from '../../components/ItemDetail'
 import { useParams } from 'react-router-dom';
 
+
 const ItemDetailContainer = () => {
 
     const [productDetail, setProductDetail] = useState({})
@@ -13,6 +14,7 @@ const ItemDetailContainer = () => {
 
         const getProducts = async()=> {
             try {
+              
                 const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
                 const data = await response.json();   
                 setProductDetail(data); 
