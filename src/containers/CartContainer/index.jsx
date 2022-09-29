@@ -1,5 +1,4 @@
 import React from 'react'
-import { useContext } from 'react';
 import { Shop } from '../../context/ShopProvider'
 
 const Cart = () => {

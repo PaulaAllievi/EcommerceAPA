@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import ItemDetail from '../../components/ItemDetail'
 import { useParams } from 'react-router-dom';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../../Firebase/config';
 
 
 const ItemDetailContainer = () => {
@@ -15,8 +17,10 @@ const ItemDetailContainer = () => {
         const getProducts = async()=> {
             try {
               
-                const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
-                const data = await response.json();   
+                const docRef = doc(db, "products");
+                const docSnap = await getDoc(docRef);
+
+ 
                 setProductDetail(data); 
             } catch (error) {                
             }
